@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="All upcoming events from the study associations of the University of Amsterdam Faculty of Economics & Business — Sefa, VSAE, FSA, and MAA — in one dashboard." />
+  <title>UvA FEB — Study Association Events</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">University of Amsterdam · Faculty of Economics &amp; Business</div>
+      <h1>Every study association event<span class="hero-dot">.</span> One dashboard.</h1>
+      <p class="hero-sub">
+        Browse upcoming events from all study associations at the UvA Faculty of Economics &amp; Business — sorted by what's happening next.
+      </p>
+
+      <div class="assoc-legend">
+        <div class="assoc-chip" data-assoc="sefa">
+          <div class="assoc-text">
+            <strong>Sefa</strong>
+            <span>For all FEB students</span>
+          </div>
+        </div>
+        <div class="assoc-chip" data-assoc="vsae">
+          <div class="assoc-text">
+            <strong>VSAE</strong>
+            <span>Econometrics</span>
+          </div>
+        </div>
+        <div class="assoc-chip" data-assoc="fsa">
+          <div class="assoc-text">
+            <strong>FSA</strong>
+            <span>Finance</span>
+          </div>
+        </div>
+        <div class="assoc-chip" data-assoc="maa">
+          <div class="assoc-text">
+            <strong>MAA</strong>
+            <span>Marketing</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="filter-bar">
+    <div class="filter-bar-inner">
+      <div class="filter-group">
+        <span class="filter-label">Association</span>
+        <div class="chips" data-filter-group="association">
+          <button class="chip active" data-filter="all">All</button>
+          <button class="chip" data-filter="sefa">Sefa</button>
+          <button class="chip" data-filter="vsae">VSAE</button>
+          <button class="chip" data-filter="fsa">FSA</button>
+          <button class="chip" data-filter="maa">MAA</button>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <span class="filter-label">Type</span>
+        <div class="chips" data-filter-group="type">
+          <button class="chip active" data-filter="all">All</button>
+          <button class="chip" data-filter="social">Social</button>
+          <button class="chip" data-filter="professional">Professional</button>
+          <button class="chip" data-filter="trip">International trip</button>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <span class="filter-label">Access</span>
+        <div class="chips" data-filter-group="access">
+          <button class="chip active" data-filter="all">All</button>
+          <button class="chip" data-filter="open">Open to all</button>
+          <button class="chip" data-filter="application">Application / Members</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <div class="results-meta">
+      <span id="results-count">0</span> upcoming events
+    </div>
+    <section id="event-grid" class="event-grid" aria-label="Upcoming events"></section>
+    <div id="empty-state" class="empty-state" hidden>
+      No events match your filters. Try widening your selection.
+    </div>
+  </main>
+
+  <footer>
+    <p>Sources: <a href="https://sefa.nl/events/" target="_blank" rel="noopener">sefa.nl</a> · <a href="https://vsae.nl/nl/studenten/agenda" target="_blank" rel="noopener">vsae.nl</a> · <a href="https://fsa.nl/events/" target="_blank" rel="noopener">fsa.nl</a> · <a href="https://ma-amsterdam.nl/events/" target="_blank" rel="noopener">ma-amsterdam.nl</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
